@@ -12,7 +12,7 @@ jobs:
       - run:
           name: Install Android platform 36 and build tools
           command: |
-            yes | sdkmanager --licenses > /dev/null
+            yes | sdkmanager --licenses > /dev/null || true
             sdkmanager "platforms;android-36" "build-tools;36.0.0"
       - run:
           name: Create Gradle wrapper
